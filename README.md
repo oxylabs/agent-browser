@@ -1,4 +1,4 @@
-# headless-browser
+# Headless Browser
 
 [![Headless Browser](https://github.com/oxylabs/headless-browser/blob/main/Github-banner-HB-1532x354.png)](https://oxylabs.io/products/headless-browser?utm_source=877&utm_medium=affiliate&groupid=877&utm_content=headless-browser-github&transaction_id=102f49063ab94276ae8f116d224b67)
 
