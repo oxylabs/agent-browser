@@ -31,8 +31,8 @@ Unlike running a local headless browser instance (such as a self-managed Puppete
 
 ## Browser Environments
 Headless Browser offers two specialized browser environments:
-- [Chrome-based browser](https://developers.oxylabs.io/scraping-solutions/headless-browser/chrome) (`ubc.oxylabs.io`) – high-performance remote browsers with advanced stealth running on dedicated servers with integrated proxies.
-- [Firefox-based browser (Legacy)](https://developers.oxylabs.io/scraping-solutions/headless-browser/firefox) (`ubs.oxylabs.io`) – Firefox implementation with built-in anti-detection features and proxy integration. (_**Note:** this environment will be deprecated soon._)
+- [Chrome-based browser](https://developers.oxylabs.io/products/headless-browser/chrome) (`ubc.oxylabs.io`) – high-performance remote browsers with advanced stealth running on dedicated servers with integrated proxies.
+- [Firefox-based browser (Legacy)](https://developers.oxylabs.io/products/headless-browser/firefox) (`ubs.oxylabs.io`) – Firefox implementation with built-in anti-detection features and proxy integration. (_**Note:** this environment will be deprecated soon._)
 
 It works with any library that supports the [Chrome DevTools Protocol (CDP)](https://developer.chrome.com/docs/devtools), including:
 - [Playwright](https://pypi.org/project/playwright/) (for Firefox, supported Playwright versions are 1.51 and 1.56)
@@ -53,7 +53,7 @@ The browser extension sends messages to the `window` object that your script can
 | `oxylabs-captcha-solve-error` | The auto-solver failed to bypass the CAPTCHA. |
 
 You subscribe to these events before navigation, then pause your automation until the CAPTCHA is resolved. CAPTCHA solving typically takes up to 30 seconds, depending on the type and complexity. 
-For more information about how to handle CAPTCHA events, see our [documentation](https://developers.oxylabs.io/scraping-solutions/headless-browser/features/handling-captcha-events).
+For more information about how to handle CAPTCHA events, see our [documentation](https://developers.oxylabs.io/products/headless-browser/features/handling-captcha-events).
 
 ### Dynamic CAPTCHA Solving
 Some websites display CAPTCHAs not on page load but at later stages – for example, after clicking a submit button or during a specific user interaction. Headless Browser lets you trigger CAPTCHA detection and solving manually at any point during your session.
@@ -78,7 +78,7 @@ Available parameters:
 - `p_city` – selects a specific city in lowercase (e.g., `berlin`, `los_angeles`). Requires `p_cc` or `p_state` to also be specified.
 - `p_state` – selects a US state in lowercase (e.g., `texas`, `ohio`). If both `p_state` and `p_cc` are specified, `p_state` takes priority.
 
-If you want to learn more information about Headless Browsers geolocation targeting, check out our [documentation](https://developers.oxylabs.io/scraping-solutions/headless-browser/features/geolocation-targeting) on Headless Browsers geolocation targeting.
+If you want to learn more information about Headless Browsers geolocation targeting, check out our [documentation](https://developers.oxylabs.io/products/headless-browser/features/geolocation-targeting) on Headless Browsers geolocation targeting.
 
 ### Device Type
 Headless Browser can emulate different device types using the `p_device` parameter. This is useful for scraping responsive layouts, mobile-specific content, or device-dependent behavior such as different CAPTCHAs or UI elements.
@@ -108,7 +108,7 @@ The Session Inspection tool is a powerful debugging feature that uses VNC (Virtu
 - Verify proper execution of your automation workflows.
 - Troubleshoot unexpected behavior in real time.
 
-For more information, check out our [documentation](https://developers.oxylabs.io/scraping-solutions/headless-browser/features/session-inspection) about Session Inspection.
+For more information, check out our [documentation](https://developers.oxylabs.io/products/headless-browser/features/session-inspection) about Session Inspection.
 
 Some other features of Headless Browser include:
 - **Integrated residential proxies –** every session routes through Oxylabs' residential proxy network, eliminating the need for separate proxy management.
@@ -183,7 +183,7 @@ To keep your usage efficient and your costs predictable, follow the traffic opti
 For detailed configuration, advanced usage, and multi-language code examples, check these official pages:
 - [Get started with Headless Browser](https://oxylabs.io/products/headless-browser)
 - [Headless Browser documentation](https://developers.oxylabs.io/scraping-solutions/headless-browser)
-- [Troubleshooting guide](https://developers.oxylabs.io/scraping-solutions/headless-browser/troubleshooting-guide)
+- [Troubleshooting guide](https://developers.oxylabs.io/products/headless-browser/troubleshooting-guide)
 
 ## Contact us
 If you have questions or need support, reach out to us at [support@oxylabs.io](mailto:support@oxylabs.io), or through live chat, accessible via [Oxylabs Dashboard](https://dashboard.oxylabs.io/en/). For enterprise-related inquiries, contact your dedicated account manager.
