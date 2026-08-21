@@ -160,6 +160,8 @@ Oxylabs offers three distinct scraping products, each designed for different use
 - **[Web Unblocker](https://oxylabs.io/products/web-unblocker) –** you have an existing scraping pipeline and need a drop-in proxy replacement that handles unblocking automatically.
 - **[Headless Browser](https://oxylabs.io/products/headless-browser) –** you need full browser control for JavaScript-heavy sites, complex interactions, AI-driven automation, or when you need to interact with dynamic page elements (clicks, form fills, scrolling).
 
+[![Oxylabs promo code](https://github.com/oxylabs/headless-browser/blob/main/Github%20repositories%20banner%20v1%402x.png)](https://oxylabs.io/web-api-early-access?&utm_content=web_api_waitinglist&groupid=877)
+
 ## Common Use Cases 
 Headless Browser is the right choice when your task requires real browser interaction rather than simple HTTP requests. Common scenarios include:
 1. **JavaScript-heavy websites –** single-page applications (SPAs) and sites that load content dynamically via JavaScript require a real browser engine to render properly.
