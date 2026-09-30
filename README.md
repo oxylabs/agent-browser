@@ -1,6 +1,6 @@
 # Agent Browser
 
-[![Agent Browser](https://github.com/oxylabs/headless-browser/blob/main/Github-banner-HB-1532x354.png)](https://oxylabs.io/products/headless-browser?utm_content=oxylabs-headless-browser&groupid=877)
+[![Agent Browser](https://github.com/oxylabs/agent-browser/blob/main/Github-banner-AB-1532x354.png)](https://oxylabs.io/products/headless-browser?utm_content=oxylabs-headless-browser&groupid=877)
 
 [![](https://dcbadge.limes.pink/api/server/Pds3gBmKMH?style=for-the-badge&theme=discord)](https://discord.gg/Pds3gBmKMH) [![YouTube](https://img.shields.io/badge/YouTube-Oxylabs-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@oxylabs)
 
