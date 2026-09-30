@@ -1,6 +1,6 @@
 # Agent Browser
 
-[![Agent Browser](https://github.com/oxylabs/agent-browser/blob/main/Github-banner-AB-1532x354.png)](https://oxylabs.io/products/headless-browser?utm_content=oxylabs-headless-browser&groupid=877)
+[![Agent Browser](https://github.com/oxylabs/agent-browser/blob/main/Github-banner-AB-1532x354.png)](https://oxylabs.io/products/agent-browser?utm_content=oxylabs-agent-browser&groupid=877)
 
 [![](https://dcbadge.limes.pink/api/server/Pds3gBmKMH?style=for-the-badge&theme=discord)](https://discord.gg/Pds3gBmKMH) [![YouTube](https://img.shields.io/badge/YouTube-Oxylabs-red?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@oxylabs)
 
@@ -22,7 +22,7 @@
 - [Learn More](#learn-more)
 - [Contact Us](#contact-us)
 
-Welcome to the official repository overview for Oxylabs' [Agent Browser](https://oxylabs.io/products/headless-browser). This guide provides a technical overview of how agent Browser works, its key features, some common use cases, and how to use it to optimize your web scraping infrastructure.
+Welcome to the official repository overview for Oxylabs' [Agent Browser](https://oxylabs.io/products/agent-browser). This guide provides a technical overview of how agent Browser works, its key features, some common use cases, and how to use it to optimize your web scraping infrastructure.
 
 ## What is Agent Browser?
 Agent Browser is a cloud-based solution from Oxylabs that lets you run and control remote browser sessions without the complexity of managing them locally or on your own infrastructure. It provides a seamless way to execute browser-based automation, testing, and web scraping without dealing with browser setup, resource constraints, or detection challenges.
@@ -31,8 +31,8 @@ Unlike running a local agent browser instance (such as a self-managed Puppeteer 
 
 ## Browser Environments
 Agent Browser offers two specialized browser environments:
-- [Chrome-based browser](https://developers.oxylabs.io/products/headless-browser/chrome) (`ubc.oxylabs.io`) – high-performance remote browsers with advanced stealth running on dedicated servers with integrated proxies.
-- [Firefox-based browser (Legacy)](https://developers.oxylabs.io/products/headless-browser/firefox) (`ubs.oxylabs.io`) – Firefox implementation with built-in anti-detection features and proxy integration. (_**Note:** this environment will be deprecated soon._)
+- [Chrome-based browser](https://developers.oxylabs.io/products/agent-browser) (`hb.oxylabs.io`) – high-performance remote browsers with advanced stealth running on dedicated servers with integrated proxies.
+- [Firefox-based browser (Legacy)](https://developers.oxylabs.io/products/agent-browser) (`hb.oxylabs.io`) – Firefox implementation with built-in anti-detection features and proxy integration. (_**Note:** this environment will be deprecated soon._)
 
 It works with any library that supports the [Chrome DevTools Protocol (CDP)](https://developer.chrome.com/docs/devtools), including:
 - [Playwright](https://pypi.org/project/playwright/) (for Firefox, supported Playwright versions are 1.51 and 1.56)
@@ -53,7 +53,7 @@ The browser extension sends messages to the `window` object that your script can
 | `oxylabs-captcha-solve-error` | The auto-solver failed to bypass the CAPTCHA. |
 
 You subscribe to these events before navigation, then pause your automation until the CAPTCHA is resolved. CAPTCHA solving typically takes up to 30 seconds, depending on the type and complexity. 
-For more information about how to handle CAPTCHA events, see our [documentation](https://developers.oxylabs.io/products/headless-browser/features/handling-captcha-events).
+For more information about how to handle CAPTCHA events, see our [documentation](https://developers.oxylabs.io/products/agent-browser/captcha-handling).
 
 ### Dynamic CAPTCHA Solving
 Some websites display CAPTCHAs not on page load but at later stages – for example, after clicking a submit button or during a specific user interaction. Agent Browser lets you trigger CAPTCHA detection and solving manually at any point during your session.
@@ -66,7 +66,7 @@ Supported CAPTCHA types:
 - `recaptcha`
 - `turnstile` (Cloudflare CAPTCHA)
 
-To trigger reCAPTCHA solving after a form submission, visit our [documentation](https://developers.oxylabs.io/scraping-solutions/headless-browser/features/dynamic-captcha-solving).
+To trigger reCAPTCHA solving after a form submission, visit our [documentation](https://developers.oxylabs.io/products/agent-browser/captcha-handling#dynamic-manual-triggers).
 
 _**Important:** Cloudflare `turnstile` CAPTCHAs require a different approach. You must initiate CAPTCHA detection before performing the action that triggers it, since `turnstile` must be intercepted before it appears on screen._
 
@@ -78,7 +78,7 @@ Available parameters:
 - `p_city` – selects a specific city in lowercase (e.g., `berlin`, `los_angeles`). Requires `p_cc` or `p_state` to also be specified.
 - `p_state` – selects a US state in lowercase (e.g., `texas`, `ohio`). If both `p_state` and `p_cc` are specified, `p_state` takes priority.
 
-If you want to learn more information about Agent Browsers geolocation targeting, check out our [documentation](https://developers.oxylabs.io/products/headless-browser/features/geolocation-targeting) on Agent Browsers geolocation targeting.
+If you want to learn more information about Agent Browsers geolocation targeting, check out our [documentation](https://developers.oxylabs.io/products/agent-browser/geolocation-and-proxy-selection) on Agent Browsers geolocation targeting.
 
 ### Device Type
 Agent Browser can emulate different device types using the `p_device` parameter. This is useful for scraping responsive layouts, mobile-specific content, or device-dependent behavior such as different CAPTCHAs or UI elements.
@@ -108,7 +108,7 @@ The Session Inspection tool is a powerful debugging feature that uses VNC (Virtu
 - Verify proper execution of your automation workflows.
 - Troubleshoot unexpected behavior in real time.
 
-For more information, check out our [documentation](https://developers.oxylabs.io/products/headless-browser/features/session-inspection) about Session Inspection.
+For more information, check out our [documentation](https://developers.oxylabs.io/products/agent-browser/session-inspection-and-recording) about Session Inspection.
 
 Some other features of Agent Browser include:
 - **Integrated residential proxies –** every session routes through Oxylabs' residential proxy network, eliminating the need for separate proxy management.
@@ -158,9 +158,9 @@ Oxylabs offers three distinct scraping products, each designed for different use
 ### When to choose each:
 - **[Web Scraper API](https://oxylabs.io/products/scraper-api/web) –** you want structured, ready-to-use data with a single API call. Best for e-commerce, search, and common targets.
 - **[Web Unblocker](https://oxylabs.io/products/web-unblocker) –** you have an existing scraping pipeline and need a drop-in proxy replacement that handles unblocking automatically.
-- **[Agent Browser](https://oxylabs.io/products/headless-browser) –** you need full browser control for JavaScript-heavy sites, complex interactions, AI-driven automation, or when you need to interact with dynamic page elements (clicks, form fills, scrolling).
+- **[Agent Browser](https://oxylabs.io/products/agent-browser) –** you need full browser control for JavaScript-heavy sites, complex interactions, AI-driven automation, or when you need to interact with dynamic page elements (clicks, form fills, scrolling).
 
-[![Oxylabs promo code](https://github.com/oxylabs/headless-browser/blob/main/Github%20repositories%20banner%20v1%402x.png)](https://oxylabs.io/web-api-early-access?utm_source=github&utm_medium=referral&utm_content=web_api_waitinglist&groupid=877)
+[![Oxylabs promo code](https://github.com/oxylabs/agent-browser/blob/main/Github%20repositories%20banner%20v1%402x.png)](https://oxylabs.io/web-api-early-access?utm_source=github&utm_medium=referral&utm_content=web_api_waitinglist&groupid=877)
 
 ## Common Use Cases 
 Agent Browser is the right choice when your task requires real browser interaction rather than simple HTTP requests. Common scenarios include:
@@ -183,9 +183,9 @@ To keep your usage efficient and your costs predictable, follow the traffic opti
 
 ## Learn more
 For detailed configuration, advanced usage, and multi-language code examples, check these official pages:
-- [Get started with Agent Browser](https://oxylabs.io/products/headless-browser)
-- [Agent Browser documentation](https://developers.oxylabs.io/scraping-solutions/headless-browser)
-- [Troubleshooting guide](https://developers.oxylabs.io/products/headless-browser/troubleshooting-guide)
+- [Get started with Agent Browser](https://oxylabs.io/products/agent-browser)
+- [Agent Browser documentation](https://developers.oxylabs.io/products/agent-browser)
+- [Troubleshooting guide](https://developers.oxylabs.io/products/agent-browser/troubleshooting-guide)
 
 ## Contact us
 If you have questions or need support, reach out to us at [support@oxylabs.io](mailto:support@oxylabs.io), or through live chat, accessible via [Oxylabs Dashboard](https://dashboard.oxylabs.io/en/). For enterprise-related inquiries, contact your dedicated account manager.
